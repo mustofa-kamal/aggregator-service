@@ -1,0 +1,17 @@
+# Ignore Maven build directory
+/target/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Spring Boot specific
+.env
+application-*.yml
