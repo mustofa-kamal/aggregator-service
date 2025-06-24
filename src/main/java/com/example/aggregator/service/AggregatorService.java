@@ -20,9 +20,12 @@ public class AggregatorService {
     private final RestTemplate restTemplate = new RestTemplate();
     private final ExecutorService executor = Executors.newFixedThreadPool(3);
 
-    private final String productUrl = "http://localhost:8080/aggregator-service/product";
-    private final String reviewUrl = "http://localhost:8080/aggregator-service/review";
-    private final String priceUrl = "http://localhost:8080/aggregator-service/price";
+    // The service itself runs on port 8084 as configured in application.yml.
+    // Using the wrong port here results in connection failures when invoking
+    // the internal endpoints. Update URLs to match the configured port.
+    private final String productUrl = "http://localhost:8084/product";
+    private final String reviewUrl = "http://localhost:8084/review";
+    private final String priceUrl = "http://localhost:8084/price";
 
 
 
